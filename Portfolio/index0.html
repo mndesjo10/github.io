@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel Mendes - Software Developer Portfolio</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="Navbar" id="navbar">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <a class="active" href="#Home" onclick="scrollToSection('Home')">Home</a>
+        <a href="#About" onclick="scrollToSection('About')">About</a>
+        <a href="#GitHub" onclick="scrollToSection('GitHub')">GitHub</a>
+        <a href="#Contact" onclick="scrollToSection('Contact')">Contact</a>
+    </nav>
+
+    <!-- Background video -->
+    <div id="Home">
+        <video autoplay muted loop playsinline id="Typing_Video">
+            <source src="img/video/Typing2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Video text -->
+    <div class="Video_text">
+        <h1 class="white-text">Joel Mendes's Portfolio!</h1>
+        <p class="center">
+            <strong>
+                <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+                    <br>No playwright, no stage director, no emperor, however powerful, has ever exercised such absolute authority to arrange a stage or
+                    <br>field of battle and to command such unswervingly dutiful actors or troops.
+                </q>
+                <br> - Joseph Weizenbaum
+            </strong>
+            <br><br> My name is Joel Mendes. Welcome to my portfolio website. On it, I will tell you about my background.
+            <br><br> Thank you for stopping by and enjoy!
+        </p>
+    </div>
+
+    <!-- About Section -->
+    <div class="Row fade-in" id="About">
+        <div class="Column_2">
+            <img src="img/html_custom2.png" alt="About Joel Mendes">
+        </div>
+        <div class="Column_1">
+            <h1>About</h1>
+            <P>
+                I am a software developer with a passion for creating innovative solutions and I love coding! As a father of three, I enjoy spending time with my family and travel when I can.
+                <br><br>
+                I am a graduate of <a href="https://learncodinganywhere.com" target="_blank" rel="noopener" class="underline-link">The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                <br><br>
+                I am a full-stack developer and would love to work with you on your project. <a href="#Contact" class="underline-link">Contact</a> me below!
+                <br><br>
+                Connect with me on <a href="https://www.linkedin.com/in/joel-mendes-6b830218a/" target="_blank" rel="noopener" class="underline-link">LinkedIn</a>.
+            </P>
+        </div>
+    </div>
+
+    <!-- GitHub Section -->
+    <div class="Row fade-in" id="GitHub">
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can view my coding projects on my GitHub portfolio here:
+                <br>
+                <span class="center" style="display: flex; justify-content: center; margin-top: 15px;">
+                    <a href="https://github.com/mndesjo10" target="_blank" rel="noopener" class="underline-link">My GitHub</a>
+                </span>
+            </p>
+        </div>
+        <div class="Column_2">
+            <a href="https://github.com/mndesjo10" target="_blank" rel="noopener">
+                <img src="img/GitHub.png" alt="GitHub Logo">
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="Row fade-in" id="Contact">
+        <div class="Column_2 Column_tall">
+            <img src="img/html_custom04.png" alt="Contact Image">
+        </div>
+        <div class="Column_1 Column_tall">
+            <h1>Contact</h1>
+            <P>Click the button below to open the form, or reach out directly!</P>
+            <button class="contact-button" onclick="openContactForm()">Contact me</button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="center">&copy; <span id="currentYear"></span> Joel Mendes. Built with ❤️ and lots of ☕.</p>
+        <br>
+    </footer>
+
+    <!-- Slideshow section -->
+    <div class="slideshow-container fade-in" id="slideshow">
+        <div class="mySlides fade">
+            <img src="img/my-photo.jpeg" alt="Projects 1">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/my-photo2.jpeg" alt="Projects 2">
+        </div>
+        <div class="mySlides fade">
+            <img src="img/my-photo.jpeg" alt="Projects 3">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div style="text-align:center; margin-bottom: 40px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- Sticky Contact Button -->
+    <button class="sticky-contact" onclick="openContactForm()">Contact me</button>
+
+    <!-- Popup Contact Form -->
+    <div class="popup-container" id="popupContactForm">
+        <div class="popup-form">
+            <div class="popup-header">
+                <h2 class="popup-title">Contact</h2>
+            </div>
+            <form id="contactForm">
+                <div class="popup-form-group">
+                    <label class="popup-label" for="popupName">Name</label>
+                    <input type="text" id="popupName" name="name" required class="popup-input" placeholder="Type your name here">
+                </div>
+                <div class="popup-form-group">
+                    <label class="popup-label" for="popupPhone">Phone</label>
+                    <input type="tel" id="popupPhone" name="phone" class="popup-input" placeholder="Type your phone number here">
+                </div>
+                <div class="popup-form-group">
+                    <label class="popup-label" for="popupEmail">Email</label>
+                    <input type="email" id="popupEmail" name="email" required class="popup-input" placeholder="Type your email address here">
+                </div>
+                <div class="popup-form-group">
+                    <label class="popup-label" for="popupMessage">Message</label>
+                    <textarea id="popupMessage" name="message" required class="popup-input" placeholder="Type your message here"></textarea>
+                </div>
+                <button type="submit" class="popup-submit">Submit</button>
+                <button type="button" class="popup-close-btn" onclick="closeContactForm()">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file with defer -->
+    <script src="script.js" defer></script>
+</body>
+</html>
